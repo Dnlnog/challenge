@@ -1,0 +1,46 @@
+<!-- <div class="uxg-menu-header" *ngIf="auth.user$ | async as user">
+    <div class="uxg-avatar-hero-block">
+        <div class="uxg-avatar" large><img [src]="src" [width]="size" [height]="size" class="profile-image" /></div>
+        <div class="info">
+            <h6 class="uxg-h6">{{user.name}}</h6>
+        </div>
+    </div>
+</div> -->
+<!-- <button mat-stroked-button [matMenuTriggerFor]="menuHero" color="secondary" ng-init><span>Open
+        Profile</span></button>
+<mat-menu #menuHero="matMenu" class="uxg-user-profile">
+    <div class="uxg-menu-header">
+        <div class="uxg-avatar-hero-block" *ngIf="auth.user$ | async as user">
+            <div class="uxg-avatar" large><img [src]="src" [width]="size" [height]="size" class="profile-image" />
+            </div>
+            <h6 class="h6">{{user.name}}</h6>
+            <span class="caption">{{user.email}}</span>
+        </div>
+    </div>
+    <div class="uxg-menu-footer">
+        <button mat-flat-button color="primary" dense (click)="auth.logout()">
+            <mat-icon>exit_to_app</mat-icon>
+            Logout
+        </button>
+    </div>
+</mat-menu> -->
+<div class="info">
+    <img [src]="src" [width]="size" [height]="size" class="profile-image" />
+    <button mat-stroked-button [matMenuTriggerFor]="menuHero" color="secondary" ng-init><span>Open
+            Profile</span></button>
+    <mat-menu #menuHero="matMenu" class="uxg-user-profile">
+        <div class="card" *ngIf="auth.user$ | async as user">
+            <div class="user_details">
+                <div class="name">
+                    <span>Name:</span>
+                    <p>{{user.name}}</p>
+                </div>
+                <div class="email">
+                    <span>Email:</span>
+                    <p>{{user.email}}</p>
+                </div>
+            </div>
+            <div class="btn" (click)="auth.logout()">Logout</div>
+        </div>
+    </mat-menu>
+</div>
