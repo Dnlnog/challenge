@@ -26,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-
+## Further NOTES
 
 This SPA was made in angular 13, with NgRx Store. To run the app, just need to run the command 'npm i' to install all the packages require.
 After that just run 'ng serve' it will start the app on the url: localhost:3000
